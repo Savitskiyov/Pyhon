@@ -3,13 +3,6 @@
 # *Пример:*
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 # lst = [1.1, 1.2, 3.1, 5, 10.01]
-# #lst = list(map(int, input("Введите числа через пробел:\n").split()))
-# lst2 = float(lst.split('.')[1])
-# print(lst2)
-# my_list = []
-# # for i in lst:
-# #     temp = lst2.replace('*.', '')
-# #     print(temp)
 
 # 1 вариант
 # #lst = [1.1, 1.2, 3.1, 5, 10.01]

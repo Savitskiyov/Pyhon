@@ -2,6 +2,8 @@
 # *Пример:*
 # - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 # [Негафибоначчи] (https://ru.wikipedia.org/wiki/Негафибоначчи)
+
+# 1 вариант
 import itertools
 
 my_list = []
@@ -26,5 +28,18 @@ for ind, element in enumerate(my_list, start=0):
     else:
         my_list2.append(element*-1)
 
-res = list(itertools.chain(reversed(my_list2), my_list[1:]))
+res = list(itertools.chain(reversed(my_list2), my_list[1:])) # Объединенисе строк
 print(res)
+
+
+# 2 вариант
+def nega_fibonacci(n):
+    list_negafibonacci = []
+    for i in range(1 , n + 1):
+        fibo_i = fib(i)
+        list_negafibonacci.append(fibo_i)
+        if i != 1:
+            list_negafibonacci.insert(0, (-1) ** (i) * fibo_i)
+    print(f'Негафибоначчи: {list_negafibonacci}')
+
+print (nega_fibonacci(10))
