@@ -27,15 +27,14 @@ import datetime
 import time
 # def log_func(log_lvl=0):
 
-
 def log_func(log_lvl=0):
     def logger2(func):
         def wrapper(*args, **kwargs):
             if log_lvl >= 1:
                 log_msg = f'{datetime.datetime.now():%d.%m.%Y %H:%M:%S}\t'
-                log_msg += f'функция: {func.__name__}\t'
+                log_msg += f'Функция: {func.__name__}\t'
                 res = func(*args, **kwargs)
-                log_msg += f'результат: {res}\n'
+                log_msg += f'Результат: {res}\n'
             else:
                 res = func(*args, **kwargs)
                 log_msg: str = f'{datetime.datetime.now():%d.%m.%Y %H:%M:%S}\n'
@@ -48,7 +47,31 @@ def log_func(log_lvl=0):
     return logger2
 
 
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time_ns()
+        res = func(*args, **kwargs)
+        finish = time.time_ns()
+        print(finish - start)
+        return res
+    return wrapper
+
+
+def cacher(func):
+    cache = {}
+
+    def wrapper(*args, **kwargs):
+        key = args
+        if key not in cache:
+            cache[key] = func(*args, **kwargs)
+        return cache[key]
+
+    return wrapper
+
+
 @log_func(1)
+@timer
+@cacher
 def seq(num):
     my_list = []
     for i in range(1, num+1):
@@ -64,5 +87,6 @@ print(seq(100))
 print(seq(8))
 print(seq(100))
 print(seq(3))
+print(seq(4))
 
 
