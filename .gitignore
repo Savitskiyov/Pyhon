@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/dbnavigator.xml
+.idea/encodings.xml
