@@ -6,8 +6,7 @@ stars = 1
 for i in range(numb):
     print(
               (' '*spaces) +
-              ('*'*stars) +
-              (' '*spaces)
+              ('*'*stars) 
           )
     stars += 2
     spaces -= 1
