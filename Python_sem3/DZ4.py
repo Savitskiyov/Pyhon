@@ -5,9 +5,8 @@
 
 
 numbers = [1, 2, 3, 4, 5, 13, 4, 42, 1, 2, 3, 4, 5, 67, 8, 89]
-numbers2 =set(numbers)
 new_list = []
-for elem in numbers2:
+for elem in set(numbers):
     if elem % 2 != 0:
         new_list.append(elem)
 
