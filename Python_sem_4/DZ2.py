@@ -10,8 +10,8 @@ def my_func (**kwargs):
         return kwargs
 
 def my_func2 (**kwargs):
-    for i in kwargs:
-        kwargs2 = {v:k for k, v in kwargs.items()}
+    for _ in kwargs:
+        kwargs2 = {v: k for k, v in kwargs.items()}
         return kwargs2
 
 print(my_func(a = 0, b =1, c = 3, d = 4))
