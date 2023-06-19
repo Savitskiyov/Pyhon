@@ -5,7 +5,7 @@
 # hash
 
 def my_func (**kwargs):
-    for i in kwargs:
+    for _ in kwargs:
         kwargs = dict(reversed(item) for item in kwargs.items())
         return kwargs
 
