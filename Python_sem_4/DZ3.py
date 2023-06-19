@@ -52,9 +52,9 @@ while True:
 3 - выйти')
     choise = input("Введите цифру: ")
     if BALANCE > MAX:
-        TAX = BALANCE * TAX
-        BALANCE -= TAX
-        print(f'С вас списали налог на богатство в размере {TAX}')
+        TAXE = BALANCE * TAX
+        BALANCE -= TAXE
+        print(f'С вас списали налог на богатство в размере {TAXE}')
 
     match choise:
         case '1':
