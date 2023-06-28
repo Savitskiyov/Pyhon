@@ -5,7 +5,7 @@ import random
 
 
 BOARD_SIZE = 8
-SIZE = 4
+SIZE = 100
 
 
 def rand(size):
