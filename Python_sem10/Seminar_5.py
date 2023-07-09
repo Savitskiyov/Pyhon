@@ -68,3 +68,4 @@ class AnimalFactory:
             return Mammals(**kwargs)
         else:
             raise ValueError("Invalid animal type")
+

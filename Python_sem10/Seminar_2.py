@@ -22,3 +22,4 @@ a = Rectangle(10)
 b = Rectangle(10, 5)
 print(a.perimetr(), a.area())
 print(b.perimetr(), b.area())
+

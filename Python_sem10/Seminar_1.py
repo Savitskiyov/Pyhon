@@ -3,7 +3,6 @@
 # У класса должно быть два метода, возвращающие длину окружности и её площадь.
 import math
 
-
 class Circle:
     def __init__(self, radius):
         self.radius = radius
